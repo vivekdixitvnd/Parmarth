@@ -6,6 +6,7 @@ import path from "path";
 import toTitleCase from "../util/titleCaseConverter.js";
 import Certificate from "../models/certificate.js";
 import EventVolunteer from "../models/eventVolunteers.js";
+import Request from "../models/request.js";
 
 import { createSVGWindow } from "svgdom";
 const window = createSVGWindow();
@@ -26,10 +27,11 @@ const transporter = nodemailer.createTransport({
 });
 
 const approveRequest = async (req, res, next) => {
-  const requestId = req.params.id;
+  const requestId = req.params.id
 
   try {
     const request = await Request.findById(requestId);
+    console.log(request)
     if (!request) {
       return res.status(404).json({ error: "Request not found" });
     }
@@ -40,15 +42,17 @@ const approveRequest = async (req, res, next) => {
     });
 
     const draw = SVG(document.documentElement);
+    console.log(draw)
 
     const { purpose } = request;
-
+    console.log(purpose)
     if (purpose === "event") {
       try {
         const eventVolunteer = await EventVolunteer.findOne({
           name: request.name,
           rollNumber: request.rollNumber,
         });
+        console.log(eventVolunteer)
 
         const { branch, academicYear, certificateNumber } = eventVolunteer;
         const name = toTitleCase(eventVolunteer.name);
