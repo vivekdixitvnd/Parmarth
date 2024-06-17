@@ -1,7 +1,6 @@
 import Request from "../models/request.js";
 import Volunteer from "../models/volunteers.js";
 import EventVolunteer from "../models/eventVolunteers.js";
-import Certificate from "../models/certificate.js";
 
 const getRequestData = async (req, res, next) => {
   const { purpose } = req.body;

@@ -134,7 +134,7 @@ const RequestReceived = () => {
                         onClick={async () => {
                           setIsApproveLoading(true);
                           await fetch(
-                            `${backendUrl}/approveRequest/` + res._id,
+                            `${backendUrl}/approveRequest/${res._id}`,
                             {
                               headers: {
                                 Authorization: "Bearer " + authCtx.token,
