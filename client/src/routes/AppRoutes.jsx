@@ -75,7 +75,7 @@ const AppRoutes = () => {
       <Route path="/rte-data" element={<RteData />} />
       <Route path="/rte-data/:academicYear" element={<RteData />} />
       {authCtx.isLoggedIn &&
-        (userType === "master" || userType === "teachers") && (
+        (userType === "master" || userType === "media") && (
           <Route path="/add-rte-data" element={<AddRteData />} />
         )}
       {authCtx.isLoggedIn &&
@@ -105,7 +105,6 @@ const AppRoutes = () => {
         )}
       {authCtx.isLoggedIn &&
         (userType === "master" ||
-          userType === "teachers" ||
           userType === "media") && (
           <Route path="/add-volunteer-data" element={<AddVolunteerData />} />
         )}
@@ -118,7 +117,6 @@ const AppRoutes = () => {
         )}
       {authCtx.isLoggedIn &&
         (userType === "master" ||
-          userType === "teachers" ||
           userType === "media") && (
           <Route
             path="/add-event-volunteers-data"

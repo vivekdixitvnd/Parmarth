@@ -99,7 +99,62 @@ const Navbar = () => {
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      Events
+                      UDGAM - Foundation Day
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/events"
+                      className={
+                        pathname === "/events" ? styles.active : styles.link
+                      }
+                      style={{ fontSize: "18px" }}
+                    >
+                      UTSAAH - Competition
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/events"
+                      className={
+                        pathname === "/events" ? styles.active : styles.link
+                      }
+                      style={{ fontSize: "18px" }}
+                    >
+                      UMMEED - Beggar's Event
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/events"
+                      className={
+                        pathname === "/events" ? styles.active : styles.link
+                      }
+                      style={{ fontSize: "18px" }}
+                    >
+                      UTSARG - Farewell
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/events"
+                      className={
+                        pathname === "/events" ? styles.active : styles.link
+                      }
+                      style={{ fontSize: "18px" }}
+                    >
+                      RAKTDAAN MAHADAAN - Blood Donation
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/events"
+                      className={
+                        pathname === "/events" ? styles.active : styles.link
+                      }
+                      style={{ fontSize: "18px" }}
+                    >
+                      MUSKAAN - Cloth's Distribution Event
                     </NavLink>
                   </li>
                   <li>
@@ -125,7 +180,7 @@ const Navbar = () => {
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      Festival Celebration
+                      CELEBRATION with STUDENTS
                     </NavLink>
                   </li>
                 </ul>
@@ -209,7 +264,7 @@ const Navbar = () => {
                 {!isLoggedIn ? (
                   <li style={{ marginTop: "1.5rem" }}>
                     <NavLink to="/login" className={styles.login}>
-                      Admin Login
+                      Login
                     </NavLink>
                   </li>
                 ) : (
@@ -266,7 +321,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                   )}
-                  {(userType === "master" || userType === "teachers") && (
+                  {(userType === "master" ||
+                    userType === "media") && (
                     <li>
                       <NavLink
                         to="/add-rte-data"
@@ -297,7 +353,6 @@ const Navbar = () => {
                     </li>
                   )}
                   {(userType === "master" ||
-                    userType === "teachers" ||
                     userType === "media") && (
                     <li>
                       <NavLink
@@ -329,7 +384,6 @@ const Navbar = () => {
                     </li>
                   )}
                   {(userType === "master" ||
-                    userType === "teachers" ||
                     userType === "media") && (
                     <li>
                       <NavLink
@@ -361,8 +415,7 @@ const Navbar = () => {
                     </li>
                   )}
                   {(userType === "master" ||
-                    userType === "media" ||
-                    userType === "teachers") && (
+                    userType === "media") && (
                     <li>
                       <NavLink
                         to="/list-posts"
