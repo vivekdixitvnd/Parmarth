@@ -108,13 +108,13 @@ const Navbar = () => {
                 <ul>
                   <li>
                     <NavLink
-                      to="/events"
+                      to="/udgam"
                       className={
-                        pathname === "/events" ? styles.active : styles.link
+                        pathname === "/udgam" ? styles.active : styles.link
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      UDGAM - Foundation Day
+                      उद्गम
                     </NavLink>
                   </li>
                   <li>
@@ -125,7 +125,7 @@ const Navbar = () => {
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      UTSAAH - Competition
+                      UTSAAH
                     </NavLink>
                   </li>
                   <li>
@@ -136,7 +136,7 @@ const Navbar = () => {
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      UMMEED - Beggar's Event
+                      UMMEED
                     </NavLink>
                   </li>
                   <li>
@@ -147,7 +147,7 @@ const Navbar = () => {
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      UTSARG - Farewell
+                      UTSARG
                     </NavLink>
                   </li>
                   <li>
@@ -158,7 +158,7 @@ const Navbar = () => {
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      RAKTDAAN MAHADAAN - Blood Donation
+                      RAKTDAAN MAHADAAN
                     </NavLink>
                   </li>
                   <li>
@@ -169,7 +169,7 @@ const Navbar = () => {
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      MUSKAAN - Cloth's Distribution Event
+                      MUSKAAN
                     </NavLink>
                   </li>
                   <li>
@@ -195,7 +195,7 @@ const Navbar = () => {
                       }
                       style={{ fontSize: "18px" }}
                     >
-                      CELEBRATION with STUDENTS
+                      Festival Celebration
                     </NavLink>
                   </li>
                 </ul>
