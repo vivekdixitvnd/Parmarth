@@ -34,6 +34,14 @@ const MobileNav = () => {
         About
       </NavLink>
       <NavLink
+        to="/team"
+        className={
+          pathname === "/about" ? "mobile-nav__active" : "mobile-nav__link"
+        }
+      >
+        Team
+      </NavLink>
+      <NavLink
         to="#"
         className={pathname === "#" ? "mobile-nav__active" : "mobile-nav__link"}
         style={{
